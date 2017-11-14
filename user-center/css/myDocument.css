@@ -1,0 +1,288 @@
+#navibar{
+  width:1000px;
+  height:30px;
+  margin:0 auto;
+}
+#navibar .navibar-wap{
+  font-family:"微软雅黑";
+  position:relative;
+}
+#navibar .navibar-sites{
+  line-height:30px;
+}
+#navibar dd{
+  float:left;
+}
+#navibar dt{
+  float:left;
+}
+#navibar .navibar-lb{
+  float:right;
+  line-height:30px;
+}
+
+.wrap{
+  width:1000px;
+  margin:0 auto;
+}
+.nav{
+  background:url(../img/02.png) no-repeat;
+  width:1000px;
+  height:50px;
+  border-bottom:4px solid #d1d1d1;
+/*  position:relative;*/
+}
+.nav .logo{
+  background:url(../img/snslogo.gif) no-repeat;
+  width:118px;
+  height:50px;
+  margin-left:15px;
+  float:left;
+}
+.nav .logo a{
+  display:block;
+  width:118px;
+  height:50px;
+  text-indent:-9999px;
+}
+.nav .navText{
+  float:left;
+  height:50px;
+  line-height:50px;
+  margin-left:15px;
+}
+.nav .navText a{
+  color:#fff;
+  font-size:14px;
+  margin-left:20px;
+}
+.nav .navText a:hover{
+  color:red;
+  text-decoration:underline;
+}
+
+#mainSearchFormId{
+  float:right;
+  width:350px;
+  margin-top:15px;
+}
+#mainSearchFormId .myName{
+  float:left;
+  width:142px;
+  height:25px;
+  background:url(../img/admin.gif) no-repeat -858px -510px;
+  overflow:hidden;
+  margin-right:5px;
+}
+#mainSearchFormId .myName input{
+  margin-top:2px;margin-left:4px;
+  padding:0;
+  width:135px;
+  height:18px;
+  border:none;
+  color: #919ca2;
+}
+#sel{
+  float: left;
+  width: 87px;
+  height: 24px;
+}
+#sel-info{
+  background:url(../img/admin.gif) no-repeat -913px -434px;
+  width: 87px;
+  height: 23px;
+  line-height:23px;
+  padding-left:10px;
+  cursor: pointer;
+  color: #919ca2;
+}
+#mainSearchFormId .simulation .go{
+  border:none;
+  float:left;
+  background:url(../img/admin.gif) no-repeat -934px -39px;
+  width:66px;
+  height:27px;
+  margin-left:10px;
+  cursor: pointer;
+}
+
+
+.mainer{
+  width:1000px;
+}
+.left159{
+  width:160px;
+  height:600px;
+  float:left;
+  background:#f5f5f5;
+  margin:0;
+  padding:0;
+}
+.left159 .leftNav{
+  padding-left:10px;
+  padding-top:10px;
+}
+.left159 .leftNav li{
+  height:36px;
+  margin-top:20px;
+}
+.left159 .leftNav .com span{  
+  width:36px;
+  height:30px;
+  float:left;
+  margin-top:5px;
+}
+.left159 .leftNav .com a{
+  font-size:14px;
+  font-weight:bold;
+  color: #004F98;
+  float:left;
+  line-height:36px;
+  text-decoration:underline;
+}
+.left159 .leftNav .com a:hover{
+  text-decoration:none;
+}
+.left159 .leftNav .nav1 span{
+  background:url(../img/icon.gif) no-repeat -45px -556px;
+}
+.left159 .leftNav .nav2 span{
+  background:url(../img/icon.gif) no-repeat -92px -556px;
+}
+.left159 .leftNav .nav3 span{
+  background:url(../img/icon.gif) no-repeat -319px -556px;
+}
+.left159 .leftNav .nav4 span{
+  background:url(../img/icon.gif) no-repeat -276px -592px;
+}
+.left159 .leftNav .nav5 span{
+  background:url(../img/icon.gif) no-repeat -265px -361px;
+}
+
+/* 右侧表单 */
+	/*	基本资料*/
+#container{
+	float:left;
+	width:830px;
+	box-sizing:border-box;
+}
+.myInfo{
+	padding:20px 15px;
+	
+}
+.myInfo .container{
+	display:flex;
+	margin:10px 0;
+}
+.myInfo div.title{
+	height:30px;
+	padding:0 10px;
+	box-sizing:border-box;
+	background:#EEEEEE;
+	cursor:pointer;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.myInfo div.info_title{
+	background:none;
+	border-bottom:1px solid #eee;
+}
+.noShow{
+	display:none;
+}
+.myInfo span.title{
+	font-size:1.2em;
+	font-weight:bold;
+}
+	
+.myInfo .avatar{
+	width:148px;
+	height:148px;
+	line-height:148px;
+	text-align:center;
+	border:1px solid #CECECE;
+	margin-right:10px;
+}
+.myInfo .detail{
+	box-sizing:border-box;
+	padding:10px 30px;
+}
+.myInfo .form-detail ul{
+	display:flex;
+	flex-wrap:wrap;
+}
+.myInfo .form-detail li{
+	width:50%;
+	margin:10px 0;
+}
+.myInfo .form-detail li.cut~li{
+	width:100%;
+}
+.myInfo .underline{
+	border-bottom:1px solid #A9A9A9;
+	margin:20px auto;
+}
+.myInfo  label{
+	display:inline-block;
+	margin:10px 0;
+	
+}
+.myInfo .contact  label{
+	display:block;
+	width:100%;
+	margin:10px 0;
+}
+
+.myInfo .contact li .contack_list li{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.myInfo .contact .contack_list>*{
+	width:50%;
+	margin:10px 0;
+}
+.myInfo .contact .contack_list>.address{
+	width:100%;
+}
+.myInfo .submit{
+	padding:5px 10px;
+	border-radius:5px;
+	background:#FD8B00;
+	margin-left:30px;
+	margin-bottom:30px;
+
+}
+.myInfo .hobbys ,.myInfo .specialitys{
+	padding-left:20px;
+}
+.myInfo .hobbys li ,.myInfo .specialitys li{
+	width:10%;
+}
+.myInfo .education .myEducation  li{
+	display:flex;
+	
+}
+.myInfo .education .myEducation>*{
+	margin:10px 0;
+}
+.myInfo .education .container span{
+	margin:10px 0;
+}
+.myInfo .education .container p{
+	margin:10px 0;
+}
+.myInfo .education .myEducation{
+	
+}
+.myInfo .education a{
+	margin:10px 0;
+	color:#0000FF;
+}
+.myInfo .education ul li{
+	margin:10px 0;
+}
+.myInfo  .alumnus{
+	margin-left:20px;
+}

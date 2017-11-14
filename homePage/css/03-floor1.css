@@ -1,0 +1,217 @@
+/*该文件只针对01-index.html*/
+/*整体布局的css*/
+
+
+
+/*****************************************/
+
+/**********banner.css 中的内容*************/
+
+/*****************.floor样式内容****************/
+.floor{
+			width:1000px;
+			margin:10px auto;
+		}
+		.floor> div{
+			background-color:#fff;
+			margin-bottom:10px;
+		}
+		.floor> div:nth-child(1){
+			width:665px;
+			height:100px;
+		}
+       .floor> div:nth-child(1) img{
+			width:655px;
+			height:90px;
+			margin:5px 5px 5px 5px;
+		}
+        
+		.floor> div:nth-child(2){
+			width:305px;
+			height:100px;
+		}
+
+		.floor> div:nth-child(3){
+			width:665px;
+			height:319px;
+		}
+		.floor> div:nth-child(4){
+			width:305px;
+			height:319px;
+		}
+       
+      
+		.floor{
+			/*1、变为弹性布局容器*/
+			display:flex;
+			/*2、允许项目们换行*/
+			flex-wrap:wrap;
+			/*3、让项目们两端对齐*/
+			justify-content:space-between;
+		}
+
+/*****************品牌轮播****************/
+#play .pingpai{
+ color: #f44;
+ width: 25px;
+ text-align: left;
+ font-size: 18px;
+ margin: 20px 5px 0 10px;
+ float:left;
+}
+#banner1{
+    width:265px;
+    height:100px;
+    overflow:hidden;
+    position:relative;
+	float:left;
+}
+#banner1 ul.banner-img{
+    position:absolute; left:0;
+}
+
+#banner1 ul.banner-img>li{float:left;width:800px; height:130}
+
+#banner1 ul.banner-img img{
+    width:120px;
+    height:43px;
+	margin:3px;
+}
+/*****************达人专访****************/
+#fw a{
+color:black;
+}
+#fw a:hover{
+color:red;
+}
+.fw1{
+ width:303px;
+ height:43px;
+ padding: 0 20px;
+ overflow:hidden;
+}
+.fw1 p{
+color: #f44;
+font-size: 18px;
+float:left;
+text-align: left;
+line-height:56PX;
+}
+.fw2{
+padding: 10px 20px 0px;
+height: 180px;
+}
+.fw2 img{
+ width:265px;
+ height:160px;
+}
+.fw2 p{
+ width:235px;
+ height:20px;
+ line-height: 24px;
+ font-size: 14px;
+ bottom: 0;
+ left: 15px;
+ text-align: center;
+ margin:-20px 20px;
+ background:#fff;
+ z-index:100;
+}
+#fw>p{
+ height: 24px;
+ line-height: 28px;
+ font-size: 14px;
+ color: #999;
+ padding:0px 20px;
+}
+#fw li{
+font-size: 14px;
+padding:5px 30px;
+}
+
+/*****************亲子视界****************/
+.SJ1{
+ width:629px;
+ height:26px;
+ margin: 20px;
+}
+
+.SJ1 div{
+float:right;
+}
+.affix span{
+    display: inline;
+    float: left;
+    width: 66px;
+    border-bottom: 1px solid #dfdfdf;
+    height: 26px;
+    line-height: 14px;
+    text-align: center;
+    font-size: 14px;
+}
+.SJ1  .active{
+ color: #e4393c; 
+ font-weight: bold; 
+ border-bottom: 2px solid red;
+ }
+
+.SJ2{
+ width: 623px;
+ height:240;
+ margin:-10px 20px 20px 20px;
+}
+.SJ2left{
+float:left;
+}
+.SJ2right{
+width:198px;
+height:240px;
+float:right;
+text-align:left;
+}
+.tips{
+color: #999;
+height:30px;
+font-size: 15px;
+line-height: 15px;
+text-align: left;
+margin:8px 0px;
+}
+.tit a:hover{
+color:red;
+}
+.tit a{
+height:44px;
+text-align: left;
+color:black;
+font-size: 15px;
+line-height: 22px;
+margin-bottom: 12px;
+}
+.des{
+height:110px;
+margin:10px 0px;
+line-height: 21px;
+font-size: 12px;
+color: #999;
+}
+.view a{
+float: right;
+color: #666;
+padding-right: 20px;
+height: 20px;
+font-size: 14px;
+}
+.view a:hover{
+color:red;
+}
+.box{
+display:none;
+}
+.box.active{
+display:block;
+}
+.box img{
+width:405px;
+height:240px;
+}

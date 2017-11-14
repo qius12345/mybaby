@@ -1,0 +1,157 @@
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd,pre{
+	
+	list-style:none;
+}
+body{
+	
+	/*font:12px "simhei",Arail,Helvetica,sans-serif;
+	color:#666;
+	/*background-color:#f5f5f5;*/
+}
+/*设置 页面中  a元素的默认样式*/
+#part7{
+	margin:auto;
+	width:1000px;
+
+	padding:0 50px 0 10px;
+	box-sizing:border-box;
+	overflow:hidden;
+
+}
+#part7 h1{
+	color:red;
+	float:left;
+}
+#part7 a{
+	float:right;
+	margin-top:45px;
+}
+a{
+	color:#333;
+	text-decoration:none;
+}
+#footer{
+	background:#F3F3F3;
+	width:1000px;
+	/*height:500px;*/
+	margin:auto;
+}
+#footer .current{
+	color:#ccc;
+	padding-left:10px;
+	font-size:14px;
+	cursor: pointer;
+}
+#footer .links span{
+	padding:0 20px 10px 10px;;
+	float:left;
+	margin-bottom:30px;
+	font-family: 微软雅黑, "Arial Narrow";
+	font-size:12px;
+	color:#999;
+}
+#footer .links a{
+	display:inline-block;
+	color:#333;
+	text-decoration:none;
+	padding:0 5px 5px 5px;
+	font-family: 微软雅黑, "Arial Narrow";
+	font-size:12px;
+}
+#footer .links{
+	border-bottom:1px dashed #dbdbdb;
+	padding-bottom:10px;
+}
+#footer .spec{
+	border:none;
+}
+#footer .ft-nav{
+	margin-top:30px;
+	font-size:10px;
+	text-align:center;
+}
+#footer .ft-info{
+	font-size:10px;
+	text-align:center;
+	margin-top:15px;
+	padding-bottom:15px;
+	border-bottom:1px solid #dbdbdb;
+}
+#footer .clearfix{
+	font-size:10px;
+	margin:0 35px;
+	/*float:left;*/
+}
+/*#footer .clearfix span{
+	display:inline-block;
+	float:left;
+	padding:5px 8px;
+}*/
+#footer div.info{
+	display:flex;
+	/*margin:0 28px;*/
+}
+#slide06{
+	width:1000px;
+	margin:auto;
+}
+#slide06 ul{
+	padding:10px 50px 10px 10px;
+	display:flex;
+	justify-content: space-between;
+}
+.clear:after{
+    contetn:"";
+    display: block;
+    clear:both;
+}
+h4{
+    padding-left:10px;
+}
+#slide06 div.c1{
+    width:500px;
+    margin-right: 40px;
+    border-top:1px dashed #ddd;
+}
+#slide06 ul.icon{
+    margin:0;
+}
+#slide06 ul a{
+    font-size: 12px;
+}
+
+#slide06 div.c{
+    display: flex;
+    justify-content: space-between;
+}
+#slide06 b a.c2{
+    display: inline-block;
+    padding:10px 40px;
+}
+#slide06 b a.c3{
+    margin-left:350px;
+}
+#slide06 ul.main li a{
+	font-size:18px;
+	width:70px;
+	display: inline-block;
+	text-align: center;
+	padding-bottom: 15px;
+	border:2px solid transparent;
+}
+#slide06 ul.main{
+	margin:8px 0;
+}
+#slide06 ul.main li a:hover{
+	border-bottom:2px solid #f33;
+	color:#f33;
+}
+#slide06 div.c div.c1 ul.icon li a{
+	padding:3px;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+}
+#slide06 div.c div.c1 ul.icon li a:hover{
+	border:1px solid #999;
+	border-radius: 10px;
+}

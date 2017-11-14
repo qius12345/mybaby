@@ -1,0 +1,168 @@
+
+/*body的样式*/
+#continer{
+	width:1100px;
+	margin:0 auto;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+#continer div{
+	margin-bottom:10px;
+}
+#continer .logo{
+	width:400px;
+	height:100px;
+	line-height:100px;
+	border-bottom:1px solid red;	
+}
+/*banner部分right*/
+#continer .middle{
+	width:550px;
+	height:600px;
+	margin-top:35px;
+	}
+#continer .mid_right{
+	background:#ffffff;
+	}
+#continer .middle{
+	position:relative;
+}
+#continer .pic{
+	position:absolute;
+	bottom:100px;
+	right:100px;
+}
+#continer .pic p img{
+	margin-top:20px;
+	margin-left:45px;
+}
+#continer .pic h3{
+	margin-top:20px;
+	margin-left:20px;
+}
+#continer .pic p a{
+	display:inline-block;
+	margin-top:20px;
+	margin-left:45px;
+	margin-bottom:20px;
+	background:#ff4444;
+	
+}
+#continer .pic p a:hover{
+	color:#fff;
+
+}
+/*banner部分left部分*/
+#continer .container{
+	background:#fff;
+}
+.container div{
+	margin:23px 30px 20px 76px;
+
+}
+.container div label{
+	display:inline-block;
+	width:95px;
+	height:32px;
+}
+.container div input{
+	width:322px;
+	height:32px;
+}
+.container div span{
+	display:block;
+	width:300px;
+	height:17px;
+	color:red;
+	font-style:italic;
+	margin-left:114px;
+	
+}
+.container div span.code{
+  display:inline;
+  margin-left:20px;
+  font-size:20px;
+}
+.container div a.codea{
+  width:180px;
+}
+.container p{
+	font-weight:bold;
+	margin-top:20px;
+	margin-left:30px;
+	font-family:"Microsoft YaHei";
+}
+.container .veri{
+	width:190px;
+	height:32px;
+}
+.container div a{
+	display:inline-block;
+	width:74px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+.container div a:hover{
+	border:1px solid red;
+}
+.container div .active{
+	background:#ff4444;
+	color:#fff;
+}
+.container div .btn{
+	background:#ff4444;
+	width:195px;
+	height:38px;
+}
+.container div .btn_span{
+		visibility:visible;
+		display:inline;
+		margin-left:20px;
+		width:108px;
+		height:17px;
+}
+.container div .btn_a{
+	display:inline;
+	width:48px;
+	height:17px;
+	color:#ff4444;
+}
+
+
+#continer .footer{
+	width:960px;
+}
+
+/*footer样式*/
+.footer{
+	margin-top:100px;
+}
+.top{
+	padding-left:120px;
+}
+.center{
+	padding-left:200px;
+}
+.bottom{
+	padding-left:370px;
+}
+.top a,.center a p,.bottom a{
+	color:#919191;
+	font-size:12px;
+}
+.top a{
+	display:inline;
+	width:12px;
+	border-left:1px solid gray;
+	padding-left:5px;
+}
+
+ a:hover{
+	color:black;
+	text-decoration:underline;
+}
+
+
+

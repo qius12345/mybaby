@@ -1,0 +1,104 @@
+#container{
+  width:1000px;
+  min-height:300px;
+  margin:auto;
+}
+#container h1{
+  text-align: center;
+}
+#container .part{
+  width:1000px;
+  height:250;
+  margin:auto;
+}
+#container #tb1{
+  margin:auto;
+}
+#container input,select{
+  box-sizing:border-box;
+  width:100%;
+  padding:5px;
+}
+#container #tb1 td{
+  padding:5px;
+}
+#container #tb1 #btn1{
+  border-radius:3px;
+  background:#FF4444;
+  color:white;
+  padding:8px;
+  width:50%;
+  border:none;
+}
+#container .hr{
+  margin-top:10px;
+  border-bottom:1px dashed #ccc;  
+}
+#container .ToolCon-tb-showDiv{
+  width:1000px;
+  height:190px;
+  margin-top:10px;
+  position:relative;
+}
+#container #tb2{
+  width:620px;
+  height:76px;
+  margin:auto;
+  border-collapse:collapse;
+  text-align:center;
+}
+#container .ToolCon-tb-showDiv input{
+  border-radius:3px;
+  background:#FF4444;
+  color:white;
+  padding:8px;
+  width:10%;
+  border:none;
+}
+#container .ToolCon-tb-showDiv h3,p{
+	text-align: center;	
+}
+#container .ToolCon-tb-showDiv span{
+  color:red;
+}
+#container .ToolCon-tb-showDiv ul{
+  list-style:none;
+  width: 400px;
+  height: 80px;
+  margin: auto;
+}
+.showBtn{
+  width:800px;
+  height:20px;
+  margin-top:20px;
+  position:absolute;
+  left:420px;
+}
+.modal{
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0, .7);
+    z-index: 999;
+}
+.modal .warn{
+  width:500px;
+  height: 200px;
+  padding-top:20px;
+  margin:100px auto;
+  background:#fff;
+  text-align:center;
+}
+.modal .warn p{
+  color:red;
+}
+.modal .warn #sure{
+  border-radius:3px;
+  background:#FF4444;
+  color:white;
+  padding:8px;
+  width:20%;
+  border:none;
+}

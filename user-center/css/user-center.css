@@ -1,0 +1,443 @@
+#navibar{
+  width:1000px;
+  height:30px;
+  margin:0 auto;
+}
+#navibar .navibar-wap{
+  font-family:"Î¢ÈíÑÅºÚ";
+  position:relative;
+}
+#navibar .navibar-sites{
+  line-height:30px;
+}
+#navibar dd{
+  float:left;
+}
+#navibar dt{
+  float:left;
+}
+#navibar .navibar-lb{
+  float:right;
+  line-height:30px;
+  position:relative;
+}
+#navibar .navibar-lb .nb-arrow{
+  display:inline-block;
+  vertical-align:middle;
+  width:6px;
+  height:4px;
+  background:url(../img/navbar.png) no-repeat -16px -8px;
+  transform:rotate(-180deg);
+  margin-left:5px;
+  margin-bottom:5px;
+  transition:all .1s linear;
+}
+#navibar .navibar-lb:hover .nb-arrow{
+  transform-origin:50% 50%;
+  transform:rotate(0deg);
+  background:url(../img/navbar.png) no-repeat -16px -8px;
+}
+#navibar .navibar-lb .login-list{
+  display:none;
+  width:110px;
+  position:absolute;
+  top:30px;
+  left:-5px;
+  padding-left:5px;
+  border:1px solid #ECECEC;
+  background-color:#fff;
+  z-index:100;
+
+}
+#navibar .navibar-lb:hover .login-list{
+  display:block;
+}
+#navibar .navibar-lb .login-list .bg{
+  background:url(../img/navbar.png) no-repeat 0px -125px;
+}
+#navibar .navibar-lb .login-list .bg1{
+  background-position:5px -235px;
+}
+
+
+
+
+
+
+.wrap{
+  width:1000px;
+  margin:0 auto;
+}
+.nav{
+  background:url(../img/02.png) no-repeat;
+  width:1000px;
+  height:50px;
+  border-bottom:4px solid #d1d1d1;
+/*  position:relative;*/
+}
+.nav .logo{
+  background:url(../img/snslogo.gif) no-repeat;
+  width:118px;
+  height:50px;
+  margin-left:15px;
+  float:left;
+}
+.nav .logo a{
+  display:block;
+  width:118px;
+  height:50px;
+  text-indent:-9999px;
+}
+.nav .navText{
+  float:left;
+  height:50px;
+  line-height:50px;
+  margin-left:15px;
+}
+.nav .navText a{
+  color:#fff;
+  font-size:14px;
+  margin-left:20px;
+}
+.nav .navText a:hover{
+  color:red;
+  text-decoration:underline;
+}
+
+#mainSearchFormId{
+  float:right;
+  width:350px;
+  margin-top:15px;
+  position:relative;
+}
+
+#mainSearchFormId #shelper{
+    width: 230px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    top: 23px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.2);
+    list-style-type: disc;
+    display:none;
+}
+#mainSearchFormId #shelper>li{
+    overflow: hidden;
+    padding: 1px 6px;
+    line-height: 24px;
+    cursor: pointer;
+}
+#shelper>li:hover,#shelper>li.hover{
+    background: #f5f5f5;
+}
+#shelper .search-item{
+    color: #005AA0;
+    float: left;
+    width: 190px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+#mainSearchFormId .myName{
+  float:left;
+  width:142px;
+  height:25px;
+  background:url(../img/admin.gif) no-repeat -858px -510px;
+  overflow:hidden;
+  margin-right:5px;
+}
+#mainSearchFormId .myName input{
+  margin-top:2px;margin-left:4px;
+  padding:0;
+  width:135px;
+  height:18px;
+  border:none;
+  color: #919ca2;
+}
+#sel{
+  float: left;
+  width: 87px;
+  height: 24px;
+}
+#sel-info{
+  background:url(../img/admin.gif) no-repeat -913px -434px;
+  width: 87px;
+  height: 23px;
+  line-height:23px;
+  padding-left:10px;
+  cursor: pointer;
+  color: #919ca2;
+}
+#mainSearchFormId .simulation .go{
+  border:none;
+  float:left;
+  background:url(../img/admin.gif) no-repeat -934px -39px;
+  width:66px;
+  height:27px;
+  margin-left:10px;
+  cursor: pointer;
+}
+
+
+.mainer{
+  width:1000px;
+}
+.left159{
+  width:160px;
+  height:800px;
+  float:left;
+  background:#f5f5f5;
+  margin:0;
+  padding:0;
+}
+.left159 .leftNav{
+  padding-left:10px;
+  padding-top:10px;
+}
+.left159 .leftNav li{
+  height:36px;
+  margin-top:20px;
+}
+.left159 .leftNav .com span{  
+  width:36px;
+  height:30px;
+  float:left;
+  margin-top:5px;
+}
+.left159 .leftNav .com a{
+  font-size:14px;
+  font-weight:bold;
+  color: #004F98;
+  float:left;
+  line-height:36px;
+  text-decoration:underline;
+}
+.left159 .leftNav .com a:hover{
+  text-decoration:none;
+}
+.left159 .leftNav .nav1 span{
+  background:url(../img/icon.gif) no-repeat -45px -556px;
+}
+.left159 .leftNav .nav2 span{
+  background:url(../img/icon.gif) no-repeat -92px -556px;
+}
+.left159 .leftNav .nav3 span{
+  background:url(../img/icon.gif) no-repeat -319px -556px;
+}
+.left159 .leftNav .nav4 span{
+  background:url(../img/icon.gif) no-repeat -276px -592px;
+}
+.left159 .leftNav .nav5 span{
+  background:url(../img/icon.gif) no-repeat -265px -361px;
+}
+.right{
+  width:580px;
+  float: left;
+}
+
+.side{
+  width:260px;
+  float:left;
+}
+.modBoxD .thD{
+  height: 30px;
+  margin-left:10px;
+  margin-top:10px;
+  line-height: 30px;
+  background: url(../img/2010admin.png) no-repeat -297px -103px;
+}
+.modBoxD .thD .mark {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    float: left;
+    padding: 0 0 0 14px;
+}
+.modBoxD .thD .mark2 {
+    float: left;
+    padding: 0 0 0 5px;
+    color: #666;
+}
+.modBoxD .thD .subMark2 {
+    width: 27px;
+    height: 17px;
+    background: url(../img/2010admin.png) no-repeat -557px -147px;
+    line-height: 18px;
+    float: right;
+    display: inline;
+    margin: 6px 9px 0 0;
+    color: #9f3e08;
+    padding: 1px 0 0 8px;
+}
+.modBoxD .tbD {
+    background: #f8ffef;
+    zoom: 1;
+    border-left: 1px solid #d3e2c1;
+    border-right: 1px solid #d3e2c1;
+	margin-left:10px;
+	border:1px solid #ddd;
+	padding:10px 2px;
+}
+.expPicA {
+    overflow: hidden;
+    width: 228px;
+    margin: 0 auto;
+}
+.expPicA .iPic {
+    float: left;
+    width: 90px;
+    height: 78px;
+}
+.expPicA .iPic img {
+    width: 76px;
+    height: 76px;
+    border: 1px solid #ccc;
+}
+.expPicA .iTit {
+    padding: 8px 0 0;
+    width: 133px;
+    float: left;
+    height: 24px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.expPicA .iTit2 {
+    width: 133px;
+    float: left;
+    height: 24px;
+}
+.expPicA .iTit2 .btn {
+    background: url(../img/2010admin.png) no-repeat -777px -145px;
+    width: 67px;
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    zoom: 1;
+    text-decoration: none;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+.yqBox {
+    position: relative;
+	overflow: hidden;
+    width: 231px;
+    margin: 10px auto;
+}
+.yqBox .mList {
+    overflow: hidden;
+    line-height: 25px;
+}
+.yqBox .mList li {
+    height: 25px;
+    width: 207px;
+    overflow: hidden;
+    border-bottom: 1px dashed #83aa50;
+    float: left;
+    background: url(../img/2010admin.png) no-repeat -557px -63px;
+    padding: 0 0 0 24px;
+}
+.yqBox .mList .mListL {
+    width: 140px;
+    float: left;
+    overflow: hidden;
+}
+.yqBox .mList a{
+    text-decoration: none;
+}
+.yqBox .mList .mListR {
+    float: right;
+    width: 65px;
+    text-align: right;
+    white-space: nowrap;
+}
+.yqBox .mMore {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    text-align: right;
+    margin: 10px 0 0;
+}
+.modBoxD .thD .subMark {
+    float: right;
+    padding: 0 12px 0 0;
+}
+.piclist {
+    width: 228px;
+    margin: 17px 0 0 20px;
+}
+.buluo {
+    overflow: hidden;
+    width: 228px;
+    margin: 10px auto;
+}
+.buluo li {
+    width: 228px;
+    float: left;
+    height: 70px;
+    border-bottom: 1px dashed #83aa50;
+    padding: 8px 0 0;
+}
+.buluo .iPic {
+    display: block;
+    float: left;
+    width: 67px;
+    height: 60px;
+}
+.buluo .iPic img {
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+    border: 1px solid #ddd;
+}
+.buluo .pTit {
+    float: left;
+    width: 160px;
+    height: 20px;
+    line-height: 20px;
+	text-indent:0;
+}
+.buluo .pTit .icon {
+    float: left;
+    vertical-align: middle;
+    width: 17px;
+    height: 16px;
+    background: url(../img/icon.gif) no-repeat -200px -41px;
+}
+.buluo .pTit .iName {
+    width: 143px;
+    float: left;
+    height: 20px;
+    overflow: hidden;
+}
+.buluo .pTit .iName a {
+    background: url(../img/2010admin.png) no-repeat right -172px;
+    padding: 0 23px 0 0;
+    float: left;
+}
+.buluo .pCat {
+    width: 160px;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+	text-indent:0;
+}
+.buluo .pLink a {
+    display: block;
+    width: 56px;
+    height: 21px;
+    background: url(../img/2010admin.png) no-repeat -600px -145px;
+    float: left;
+    text-decoration: none;
+    line-height: 21px;
+}
+
+

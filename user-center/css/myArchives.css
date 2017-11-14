@@ -1,0 +1,43 @@
+#myArchives{
+	width:830px;
+	float:left;
+}
+.myArchives{
+	padding:20px 0 0 0 ;
+}
+.myArchives>div	{
+	padding:10px;
+	height:30px;
+	line-height:30px;
+}
+
+#myArchives .left{
+	float:left;
+}
+#myArchives .left .book{
+	display:inline-block;
+	width:22px;
+	height:28px;
+	vertical-align:middle;
+	background:url("../img/icon.gif") no-repeat -45px -157px;
+}
+#myArchives .right{
+	float:right;
+	width:50%;
+	background:#F1FFF8;
+	border:1px solid #666;
+	
+}
+#myArchives #progressbar  span{
+	display:inline-flex;
+}
+#myArchives #progressbar .container{
+	width:100px;
+	height:10px;
+	border:1px solid #666;
+}
+#myArchives #progressbar .fill{
+	height:10px;
+	width:30px;
+	background:#6BBB38;
+}

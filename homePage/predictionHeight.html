@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nameTest.css">
+</head>
+<body>
+  <div class="header">
+				<div class="lianjie">
+					<dt>
+						太平洋网络：
+					</dt>
+					<dd>
+						<a href="#">电脑网</a>
+						<a href="#">汽车网</a>
+						<a href="#">时尚网</a>
+						<a href="#" class="active">亲子网</a>
+						<a href="#">家居网</a>
+				  </dd>
+				</div>
+				<div class="lore">	  
+					<div class="login">
+						<a href="#">
+							<span>登录</span>						
+							<i class="bt-down"></i>
+						</a>
+						<ul class="login-list">
+							<li><a href="#" class="bg">通行证登录</a> <b class="up"></b></li>
+							<li><a href="#" class="bg bg1">免注册登录</a></li>
+							<li><a href="#" class="bg bg2">QQ登录</a></li>
+							<li><a href="#" class="bg bg3">微博登录</a></li>
+							<li><a href="#" class="bg bg4">微信登录</a></li>
+						</ul>
+					</div>
+					<div class="rega">
+					  <a href="#">注册</a>
+					</div>
+				</div> 
+		</div>	
+		<div class="topBanner">
+		<img src="img/tools/background.jpg"/>
+		</div>
+		<div id="container">
+     <h1>儿童身高预测</h1>
+	 <div class="part">
+	   <table id="tb1">
+	      <tr>
+		     <td>宝宝性别</td>
+			 <td>
+			    <select id="sel1">
+				   <option value="1" selected="selected">男孩</option>
+				   <option value="2">女孩</option>
+				</select>
+			 </td>
+			 <td></td>
+		  </tr>
+		  <tr>
+		     <td>父亲身高</td>
+			 <td>
+			    <input id="faheight" type="number">
+			 </td>
+			 <td>cm</td>
+		  </tr>
+		  <tr>
+		     <td>母亲身高</td>
+			 <td>
+			    <input id="moheight" type="number">
+			 </td>
+			 <td>cm</td>
+		  </tr>
+		  <tr>
+		     <td></td>
+			 <td>			    
+			    <button id="btn1" type="button">计算</button>
+			 </td>
+			 <td></td>
+		  </tr>
+	   </table>
+	 </div>
+
+	 <div class="hr"></div>
+
+	 <div class="ToolCon-tb-showDiv">
+		<!-- 	    <h3>测试结果</h3> -->
+		<!-- 		<span style="display:block">您的宝贝身高可能会在172CM~178CM之间哦。</span> -->
+		<!--         <div class="showBtn">  -->
+		<!--  	      <input id="btn2" type="button" value="重新计算">  -->
+		<!--  	      <input id="btn3" type="button" value="清除">  -->
+		<!--  	    </div> -->
+	 </div>
+  </div>
+  <div class="modalBox">
+		<!--   <div class="modal" style="display:none"> -->
+		<!--      <div class="warn"> -->
+		<!-- 	   <h1>提示信息</h1> -->
+		<!-- 	   <p>请输入完整的信息</p> -->
+		<!-- 	   <button id="sure" type="button">确定</button> -->
+		<!-- 	 </div> -->
+		<!--   </div> -->
+  </div>
+
+		<footer>
+			  <div class="foot">
+				  <div>
+					  <a href="#">About PCGROUP</a> | 
+					  <a href="#">网站介绍</a> | 
+					  <a href="#">隐私政策</a> | 
+					  <a href="#">广告服务</a> | 
+					  <a href="#">合作媒体</a> | 
+					  <a href="#">投稿指南</a> | 
+					  <a href="#">使用条款</a> | 
+					  <a href="#">网站律师</a> | 
+					  <a href="#">联系我们</a> | 
+					  <a href="#">招聘精英</a> | 
+					  <a href="#">帮助中心</a> | 
+					  <a href="#">阿拉丁意见箱</a> | 
+					  <a href="#"><b>用户体验提升计划</b></a>
+				 </div>
+					<ul>
+					  <li>
+						  <a href="#">
+				  <img src="img/tools/g-footer-logo.png">
+				</a>
+						</li>
+						<li>
+						  <ul>
+							  <li>未经授权禁止转载、摘编、复制或建立镜像，如有违反，追究法律责任。</li>
+								<li><a href="#">增值电信业务经营许可证：粤B2-20040647</a></li>
+								<li><a href="#">网站备案号：粤B2-20040647号-13</a></li>
+								<li>举报邮箱：shenhezhiban@pconline.com.cn</li>
+								<li>
+								  <a href="#"><img src="img/tools/ft-ghs.png">粤公网安备 44010602000158号</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+						  <a href="#"><img src="img/tools/ft-zghlwjbzx.png"></a>
+						</li>
+					</ul>
+				</div>
+		</footer>
+	
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/predictionHeight.js"></script>
+</body>
+</html>

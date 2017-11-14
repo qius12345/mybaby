@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/user-center.css">
+	<link rel="stylesheet" href="css/myDocument.css">
+	<link rel="stylesheet" href="css/recommend.css">
+	<link rel="stylesheet" href="css/manage.css">
+	<link rel="stylesheet" href="css/myArchives.css">
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/vue-router.js"></script>
+	<script src="js/vue-resource.js"></script>
+	
+</head>
+<body>
+	 <div class="navibar" id="navibar">
+	   <div class="navibar-wap">
+		   <div class="navibar-la">
+			   <div class="navibar-sites">
+				   <dt>太平洋网络：</dt>
+					 <dd>
+					   <a href="http://www.pconline.com.cn/">电脑网 | </a>
+						 <a href="http://www.pcauto.com.cn/">汽车网 | </a>
+						 <a href="http://www.pclady.com.cn/">时尚网 | </a>
+						 <a href="index_logined.html">亲子网 | </a>
+						 <a href="http://www.pchouse.com.cn/">家居网 | </a>
+					 </dd>
+				 </div>
+			 </div>
+			 <div class="navibar-lb">
+			   <ul>
+				   <li>
+					   <div>
+						   <a href="#">
+							   <i class="nb-head">
+								   <img src="img/1.jpg">
+								 </i>
+								 <span id="uname">mb46229022</span>
+								 <i class="nb-arrow"></i>
+								 <ul class="login-list">
+							     <li><a href="user-center.html"  class="bg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人中心</a></li>
+							     <li><a href="../homePage/index_logined.html"  class="bg bg1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;退出</a></li>
+						     </ul>
+							 </a>
+						 </div>
+					 </li>
+				 </ul>
+			 </div>
+		 </div>
+	 </div>
+	 <div class="wrap">
+	   <!-- 导航 -->
+		 <div class="nav">
+		   <div class="logo">
+			   <a href="#">亲子部落</a>
+			 </div>
+			 <div class="navText">
+			  <a href="user-center.html">管理中心</a>
+				<a href="myDocument.html">我的文档</a>
+			 </div>
+			 <div id="mainSearchFormId">
+				   <span class="myName">
+					   <input type="text" id="txtSearch" name="searchWord" placeholder="我要查找...">
+					 </span>
+					 
+					 <div class="simulation">
+					   <div id="sel">
+						   <div id="sel-info">小V妈推荐</div>
+						 </div>
+						 <input type="button" class="go" data-trigger="search">
+					 </div>
+					 <ul id="shelper">
+             <li title="周大福 项链">
+               <div class="search-item">周大福 项链</div>
+             </li>
+             <li title="周大福 项链">
+               <div class="search-item">周大福 项链</div>
+             </li>
+             <li title="周大福 项链">
+               <div class="search-item">周大福 项链</div>
+             </li>
+             <li title="周大福 项链">
+               <div class="search-item">周大福 项链</div>
+             </li>
+          </ul>
+			 </div>
+		 </div>
+		 <div class="mainer">
+		   <!-- 左侧导航 -->
+			 <div class="left159">
+			   <ul class="leftNav">
+				   <li class="nav1 com">
+					   <span></span>
+						 <a href="#">日记</a>
+					 </li>
+					 <li class="nav2 com">
+					   <span></span>
+						 <a href="photo.html">相册</a>
+					 </li>
+					 <li class="nav3 com">
+					   <span></span>
+						 <a href="recommend.html">小V妈推荐</a>
+					 </li>
+					 <li class="nav4 com">
+					   <span></span>
+						 <a href="practicalTool.html">实用工具</a>
+					 </li>
+					 <li class="nav5 com">
+					   <span></span>
+						 <a href="jurisdiction.html">账户权限</a>
+					 </li>
+				 </ul>
+			 </div>
+			 <!-- 右侧表单 -->
+			 <div class="right" id="container">
+          
+					<router-view></router-view>
+
+			 </div>
+		 </div>
+	 </div>
+	 <script src="js/user-center.js"></script>
+	 <script src="js/manage.js"></script>
+	 <script src="js/search.js"></script>
+	 <script>
+	  var bus = new Vue();
+		var myArchives= Vue.component('my-archives',{
+			data:function(){
+				return {
+					progress:0,
+				}
+			},
+			 template:`
+			 <div id="myArchives">
+					<div class="myArchives clear ">
+						<div class="left">
+							<span class="book"></span> 
+							<strong>我的档案</strong>
+						</div>
+						<div class="right">
+							<div id="progressbar">
+								<span>
+									档案完成度:
+								</span >
+								<span class="container">
+									<span class="fill" :style="{width:progress*100+'px'}"></span>
+								</span>
+								<span>{{progress*100}}%</span>
+							</div>
+						</div>
+					</div>
+					<router-view></router-view>	
+				</div>
+			 `
+		 })
+		var myDetails=Vue.component('my-details',{
+			data:function(){
+				return {
+					hobbys:['宠物花艺',  '手工制作',  '美容美体',  '美食烹饪',  '家具装饰', ' 娱乐时尚',  '购物逛街', '电视电影',  '观光旅游',  '摄影制图',  '保健养生',  '其他爱好'],
+					specialitys:['理财',   '摄影',   '美食',   '育儿',   '艺术',   '音乐'],
+					educations:['其它','大专','本科','硕士'],
+					parentings:['备孕中', '怀孕中', '有宝宝', '双胞胎' ,'没有宝'],
+					contact:{user_name:'真实姓名：' ,qq_msn:'QQ/MSN：',	mailing_address:'通信地址：',postcode:'邮政编码：',phone:'联系电话：'},
+					province:['','北京','上海','安徽','浙江'],
+					city:[[''],['','东城区','西城区','崇文区','宣武区','朝阳区','丰台区','石景山区','海淀区'],['','黄浦区','卢湾区','徐汇区','长宁区','静安区','普陀区','闸北区','虹口区'],['','合肥市','芜湖市','蚌埠市','淮南市','马鞍山市','淮北市','铜陵市','安庆市','黄山市'],['','杭州市','宁波市','温州市','嘉兴市','湖州市']],
+					industrys:['其它','IT','机械工程','教育','金融','技工'],
+					schedule:1,
+					residence_index:0,
+					hometown_index:0,
+					list:'',
+					uname:'lilei',
+					nickname:'',
+					gender:'0',
+					birth:'',
+					residence:0,
+					residence_city:0,
+					hometown:1,
+					hometown_city:0,
+					industry:'',
+					url:'',
+					email:'',
+					autograph:'',
+					hobby:[],
+					speciality:[],
+					parenting:'',
+					user_name:'',
+					 qq_msn:'',
+					 mailing_address:'',
+					 postalcode:'',
+					 phone:'',
+					 education:0,
+					 university:[],
+					 high_school:[],
+					 middle_school:[]
+
+				}
+			},
+			methods:{
+				loadMsg:function(){
+					this.$http.get('http://localhost/tpy_qinZi/user-center/data/loadDetails.php?uname='+this.uname)
+									.then((response)=>{
+											this.list=response.data;
+											for(var tmp in this.list){
+												if(this.list[tmp]===null){
+													this.schedule=(this.schedule-0.04);
+												}
+											}
+											this.$parent.progress=this.schedule.toFixed(2);
+											this.hometown=this.list.hometown;
+											this.hometown_city=this.list.hometown_city;
+											this.residence=this.list.residence;
+											this.residence_city=this.list.residence_city;
+											if(this.list.hobby!=null){
+												this.hobby=this.list.hobby.split(',');
+											}
+											if(this.list.speciality!=null){
+												this.speciality=this.list.speciality.split(',');
+											}
+											if(this.list.university!=null)
+											this.university=this.list.university.split(',');
+											if(this.list.high_school!=null)
+											this.high_school=this.list.high_school.split(',');
+											if(this.list.middle_school!=null)
+											this.middle_school=this.list.middle_school.split(',');
+									})
+				}
+			},
+			beforeMount:function(){
+				this.loadMsg();
+			},
+			mounted:function(){
+				$(".myInfo .update").click(()=>{
+					this.$router.push('/myUpdate');
+				})
+			},
+			template:`
+				<div class="myInfo">
+					<!-- 		基本资料					 -->
+				 <form action="data/update.php">
+					<div class="container title info_title">
+						<p>
+							<span class='title'>基本资料</span> 
+							<span>(占60%)[{{schedule==1?"已完成":"未完成"}}]</span> 
+						</p>
+						<p class="update">修改</p>
+					</div>
+					<div>
+						<div class="container detail shut">
+							<div  class=" avatar">
+								<img src="img/46289892_120x120.jpg"  >
+							</div>	
+							<div id="" class=" form-detail">
+								<ul>
+									<li>用户名：{{list.uname}}
+									
+									</li>
+									<li>昵&nbsp;&nbsp;&nbsp;称: {{list.nickname}}
+									</li>
+									<li v-if='list.gender==0'>性&nbsp;&nbsp;&nbsp;别：女</li>
+									<li v-if='list.gender==1'>性&nbsp;&nbsp;&nbsp;别：男</li>
+									<li>我的生日: {{list.birth}} </li>
+									<li>现居住地：{{province[residence_city]+city[residence][residence_city]}} 
+										
+									</li>
+									<li>电子邮箱：{{list.email}}
+										<a href="#">修改</a>
+									</li>
+									<li>
+										我的家乡：
+										{{province[list.hometown]+city[hometown][hometown_city]}} 
+									</li>
+									<li class="cut">
+										从事行业: {{industrys[list.industry]}}
+									</li>
+									<li>
+										个性网址：{{list.url}}
+									</li>
+									<li>
+										个性签名：{{list.autograph}}
+									</li>
+									<li>
+										<p>	我的爱好:  </p>
+										<ul class="hobbys">
+												<li v-for="v in hobby">{{hobbys[v]}}</li>
+										</ul>
+									</li>
+									<li>
+										<p>我的特长：</p>
+										<ul class="specialitys">
+												<li v-for="v in speciality">
+												{{specialitys[v]}}</li>
+										</ul>
+									</li>
+								</ul>
+					
+							</div>
+						</div>
+					</div>
+				 </form>
+				 <!-- 		我的宝宝证					 -->
+				 <form action="data/update.php">
+					<div class="container title info_title">
+						<p>
+							<span class='title'>我的宝宝证</span> 
+							<span>(占10%)[{{schedule==1?"已完成":"未完成"}}]</span> 
+						</p>
+						<p class="update">修改</p>
+					</div>
+					<div>
+						<div class="container detail">
+							育儿状况：{{parentings[list.parenting]}}
+						</div>
+					</div>
+				 </form>
+				  <!-- 		联系方式					 -->
+				 <form action="data/update.php">
+					<div class="container title info_title">
+						<p>
+							<span class='title'>联系方式</span> 
+							<span>(占15%)[{{schedule==1?"已完成":"未完成"}}]</span> 
+						</p>
+						<p class="update">修改</p>
+					</div>
+					<div>
+						<div class=" detail contact ">
+							<ul class="contack_list">
+								<li>真实姓名：{{list.user_name}}</li>
+								<li>QQ/MSN：
+									{{list.qq_msn}}
+									</li>
+								<li class="address">通信地址：{{list.mailing_address}}</li>
+								<li>邮政编码：{{list.postalcode}}</li>
+								<li>联系电话：{{list.phone}}</li>
+							</ul>
+							<p>(有效的通信地址、联系电话将便于您更快捷的收到您的活		动礼品，我们将加密保存您的隐私信息)
+							</p>
+								
+						</div>
+					</div>
+				 </form>
+					<!-- 教育状况 -->
+				 <form action="data/update.php">
+					<div class="container title info_title ">
+						<p>
+							<span class='title'>教育状况</span> 
+							<span>(占15%)[{{schedule==1?"已完成":"未完成"}}]</span> 
+						</p>
+						<p class="update">修改</p>
+					</div>
+					<div>
+						<div class=" detail  education">
+							<div class="container">
+								<ul class="myEducation">
+									<li>我的学历：{{educations[list.education]}} <a href="www.baidu.com">查找校友</a></li>
+									<li > <p> 大学：</P>
+											<ul>
+												<li v-for='v of university'>{{v}}</li>
+											</ul>
+									</li>
+									<li > <p>高中：</P>
+											<ul>
+												<li v-for='v of high_school'>{{v}}</li>
+											</ul>
+									</li>
+									<li > <p> 初中：</P>
+											<ul>
+												<li v-for='v of middle_school'>{{v}}</li>
+											</ul>
+									</li>
+								</ul>
+							</div>	
+								
+						</div>
+					</div>
+				 </form>
+				</div>
+				`
+		})
+		var myUpdate=Vue.component('my-update',{
+			data:function(){
+				return {
+					hobbys:['宠物花艺',  '手工制作',  '美容美体',  '美食烹饪',  '家具装饰', ' 娱乐时尚',  '购物逛街', '电视电影',  '观光旅游',  '摄影制图',  '保健养生',  '其他爱好'],
+					specialitys:['理财',   '摄影',   '美食',   '育儿',   '艺术',   '音乐'],
+					educations:['其它','大专','本科','硕士'],
+					parentings:['备孕中', '怀孕中', '有宝宝', '双胞胎' ,'没有宝'],
+					province:['请选择省','北京','上海','安徽','浙江'],
+					city:[['请选择地区'],['请选择地区','东城区','西城区','崇文区','宣武区','朝阳区','丰台区','石景山区','海淀区'],['请选择地区','黄浦区','卢湾区','徐汇区','长宁区','静安区','普陀区','闸北区','虹口区'],['请选择地区','合肥市','芜湖市','蚌埠市','淮南市','马鞍山市','淮北市','铜陵市','安庆市','黄山市'],['请选择地区','杭州市','宁波市','温州市','嘉兴市','湖州市']],
+					schedule:1,
+					residence_index:0,
+					hometown_index:0,
+					industrys:['其它','IT','机械工程','教育','金融','技工'],
+					list:'',
+					uname:'lilei',
+					nickname:'',
+					gender:'0',
+					birth:'',
+					residence:0,
+					residence_city:0,
+					hometown:0,
+					hometown_city:0,
+					industry:'',
+					url:'',
+					email:'',
+					autograph:'',
+					hobby:[],
+					speciality:[],
+					parenting:'',
+					user_name:'',
+					 qq_msn:'',
+					 mailing_address:'',
+					 postalcode:'',
+					 phone:'',
+					 education:0,
+					 university:[''],
+					 high_school:[''],
+					 middle_school:['']
+
+				}
+			},
+			methods:{
+				
+				loadCity:function(e){
+					this.residence_index=e.target.value;
+					this.residence_city=0;
+				},
+				loadHomeCity:function(e){
+					this.hometown_index=e.target.value;
+					this.hometown_city=0;
+				},
+				sub:function(msg,e){
+					console.log(e);
+					console.log(msg);
+					e.preventDefault();
+					 $form=$(e.target).parent().parent();
+					 let formData=$(this.$el).find($form).serialize();
+					 console.log(formData);
+					 this.$http.get('http://localhost/tpy_qinZi/user-center/data/update.php?'+$form.serialize())
+							.then(response=>{
+								console.log(response.data);
+								if(response.body==='true')
+								alert("保存成功");
+								else alert("网络故障");
+							})
+				},
+				loadMsg:function(){
+					this.$http.get('http://localhost/tpy_qinZi/user-center/data/loadDetails.php?uname='+this.uname)
+									.then((response)=>{
+										this.list=response.data;
+										this.nickname=this.list.nickname;
+										this.gender=this.list.gender;
+										this.birth=this.list.birth;
+										this.residence=this.list.residence;
+										this.residence_city=this.list.residence_city;
+										this.hometown=this.list.hometown;
+										this.hometown_city=this.list.hometown_city;
+										this.industry=this.list.industry;
+										this.url=this.list.url;
+										this.email=this.list.email;
+										this.autograph=this.list.autograph;
+										this.parenting=this.list.parenting;
+										this.user_name=this.list.user_name;
+										this.qq_msn=this.list.qq_msn;
+										this.mailing_address=this.list.mailing_address;
+										this.postalcode=this.list.postalcode;
+										this.phone=this.list.phone;
+										this.education=this.list.education;
+										if(this.list.hobby!=null)
+										this.hobby=this.list.hobby.split(",");
+										if(this.list.speciality!=null)
+										this.speciality=this.list.speciality.split(",");
+										if(this.list.university!=null)
+										this.university=this.list.university.split(',');
+										if(this.list.high_school!=null)
+										this.high_school=this.list.high_school.split(',');
+										if(this.list.middle_school!=null)
+										this.middle_school=this.list.middle_school.split(',');
+										for(var tmp in this.list){
+												if(this.list[tmp]===null){
+													this.schedule=(this.schedule-0.04);
+												}
+											}
+										this.$parent.progress=this.schedule.toFixed(2);
+									})
+				},
+				addEl:function(e){
+					console.log(e.target);
+					 $ename=$(e.target).parent().siblings().children().first().attr("name");
+					console.log($ename);
+					console.log(this.university);
+					if($ename=='university[]') this.university.push('');
+					if($ename=='high_school[]') this.high_school.push('');
+					if($ename=='middle_school[]') this.middle_school.push('');
+					
+				},
+				deleteEl:function(e){
+					e.preventDefault();
+					if($(e.target).parent().is(":first-child")&$(e.target).parent().next().is(":last-child")) return ;
+					else
+					 $(e.target).parent().remove();
+			
+				}
+			},
+			beforeMount:function(){
+				this.loadMsg();
+			},
+			mounted:function(){
+				$(".myInfo div.title").click(function(e){
+					e.stopPropagation();
+					var $this=$(this);
+					if($this.next().is(":hidden")){
+						$this.children().last().hide();
+						$this.next().show();
+						$this.parent().siblings().children(':first-child').children(':last-child').show().parent().next().hide();
+					}else{
+						$this.children(':last-child').show().parent().next().hide();
+					}
+				});
+				
+				
+				
+			},
+			template:`
+				<div class="myInfo">
+					<!-- 		基本资料					 -->
+				 <form action="data/update.php">
+					<div class="container title ">
+						<p>
+							<span class='title'>基本资料</span> 
+							<span>(占60%)[{{schedule==1?"已完成":"未完成"}}]</span> 
+						</p>
+						<p class="update">修改</p>
+					</div>
+					<div class="noShow">
+						<div class="container detail shut">
+							<div  class=" avatar">
+								<img src="img/46289892_120x120.jpg"  >
+							</div>	
+							<div id="" class=" form-detail">
+								<ul>
+									<li>用户名：{{uname}}
+									<input type="text" name="uname" v-model="uname"	hidden>
+									<span></span>
+									</li>
+									<li>昵&nbsp;&nbsp;&nbsp;称: 
+										<input type="text" name="nickname" v-model="nickname">
+										<span></span>	
+									</li>
+									<li>性&nbsp;&nbsp;&nbsp;别：
+										<select name="gender" v-model="gender">
+											<option value="0" selected>女</option>
+											<option value="1">男</option>
+										</select>
+									</li>
+									<li>我的生日: <input type="date" name="birth" v-model="birth"> </li>
+									<li>现居住地：
+										<select name="residence" v-on:change='loadCity($event)' v-model="residence">
+											<option  v-for="(v , k) in province"   :value="k">
+												{{v}}
+											</option>
+										</select>
+										<select name="residence_city" v-model="residence_city">
+											<option  v-for="(v , k) in city[residence]" :value='k' >{{v}}</option>
+										</select>
+									</li>
+									<li>电子邮箱：<input type="text" name='email' v-model="email">
+										<a href="#updateEmail">修改</a>
+									</li>
+									<li>
+										我的家乡：
+										<select name="hometown" v-on:change='loadHomeCity($event)'
+										v-model="hometown">
+											<option  v-for="(v , k) in province" :selected="k==hometown_index"  :value="k" >
+												{{v}}
+											</option>
+										</select>
+										<select name="hometown_city" id="" v-model="hometown_city">
+											<option v-for="(v , k) in city[hometown]" :value='k' :selected="k==hometown_city">{{v}}</option>
+										</select>
+										</select>
+									</li>
+									<li class="cut">
+										从事行业: <select name="industry" id=""
+										v-model="industry">
+											<option v-for="(v , k) of industrys" :value='k' :selecked="k==industry">{{v}}</option>
+										</select>
+									</li>
+									<li>
+										修改网址：http://my.pcbaby.com.cn/ <input type="text" name="url" v-model="url">
+										<span></span>
+									</li>
+									<li>
+										个性签名：<input type="text" name="autograph" v-model="autograph">
+									</li>
+									<li>
+										<p>	我的爱好:(可多选)</p>
+										<div class="hobby">
+											<label v-for="(v,k) in hobbys">
+												<input type="checkbox" name="hobby[]" v-model="hobby"   :value="k">{{v}}
+											</label>
+										</div>
+									</li>
+									<li>
+										<p>我的特长：（可多选）</p>
+										<div class="speciality">
+											<label v-for="(v,k) in specialitys">
+												<input type="checkbox" name="speciality[]" v-model="speciality" :value="k" >
+												{{v}}
+											</label>
+										</div>
+									</li>
+								</ul>
+					
+							</div>
+						</div>
+						<p class="underline"></p>
+						<input class="submit submit_basic" type="button" 
+								value="保存修改" @click="sub('.submit_basic',$event)">	 
+					</div>
+				 </form>
+				 <!-- 		我的宝宝证					 -->
+				 <form action="data/update.php">
+					<div class="container title ">
+						<p>
+							<span class='title'>我的宝宝证</span> 
+							<span>(占10%)[{{schedule==1?"已完成":"未完成"}}]</span> 
+						</p>
+						<p class="update">修改</p>
+					</div>
+					<div class="noShow">
+						<ul class="container detail">
+							<li v-for='(v,k) of parentings' >
+								<label>
+								<input type="radio"  v-model="parenting" name="parenting" :value="k" :checked="k==0">{{v}}
+								</label>
+							</li>
+						</ul>
+						<input class="submit submit_parenting" type="button" 
+								value="保存修改" @click="sub('.submit_parenting',$event)">	 
+					</div>
+				 </form>
+				  <!-- 		联系方式					 -->
+				 <form action="data/update.php">
+					<div class="container title ">
+						<p>
+							<span class='title'>联系方式</span> 
+							<span>(占15%)[{{schedule==1?"已完成":"未完成"}}]</span> 
+						</p>
+						<p class="update">修改</p>
+					</div>
+					<div class="noShow">
+						<div class=" detail contact ">
+							<label >
+									真实姓名：
+								<input type="text" name="user_name" v-model="user_name">
+								<span class="lock"></span>	
+							</label>
+							<label >
+									QQ/MSN：  
+								<input type="text" name="qq_msn" v-model="qq_msn">
+								<span class="lock"></span>	
+							</label>
+							<label >
+									通信地址： 
+								<input type="text" name="mailing_address" v-model="mailing_address">
+								<span class="lock"></span>	
+							</label>
+							<label >
+									邮政编码： 
+								<input type="text" name="postalcode" v-model="postalcode">
+								<span class="lock"></span>	
+							</label>
+							<label >
+									联系电话: 
+								<input type="text" name="phone" v-model="phone">
+								<span class="lock"></span>	
+							</label>
+							
+							<p>(有效的通信地址、联系电话将便于您更快捷的收到您的活		动礼品，我们将加密保存您的隐私信息)
+							</p>
+							<p class="underline"></p>	
+						</div>
+						<input class="submit submit_contact" type="button" 
+								value="保存修改" @click="sub('.submit_contact',$event)">	 
+					</div>
+				 </form>
+					<!-- 教育状况 -->
+				 <form action="data/update.php">
+					<div class="container title ">
+						<p>
+							<span class='title'>教育状况</span> 
+							<span>(占15%)[{{schedule==1?"已完成":"未完成"}}]</span> 
+						</p>
+						<p class="update">修改</p>
+					</div>
+					<div class="noShow">
+						<div class=" detail  education">
+							<div class="container">
+								<div >
+									<span>我的学历：</span>
+									<select name="education"  v-model="education" >
+										<option  v-for="(v,k) in educations" :value="k" :selected="k==education">{{v}}</option>
+									</select>
+								</div>
+								<div class="alumnus">
+									<a href="#" >查找校友</a>	
+								</div>
+							</div>
+							<div  class="container">
+								<span>我的大学：</span>
+								<ul>
+									<li v-for='(v,k) in university'>
+										<input type="text" name="university[]" :value="v"> 
+										<a :href="'#'+k" class="delete" @click="deleteEl($event)">清除</a>
+									</li>
+									<li><a href="javascript:;" class="add"  @click="addEl($event)">+添加大学学校</a></li>
+								</ul>
+							</div>
+							<div  class="container">
+								<span>我的高中:</span>
+								<ul>
+									<li v-for='(v,k) in high_school'>
+										<input type="text" name="high_school[]"  :value="v"> 
+										<a :href="'#'+k" class="delete" @click="deleteEl($event)">清除</a>
+									</li>
+									<li><a href="javascript:;" class="add"  @click="addEl($event)">+添加高中学校</a></li>
+								</ul>
+							</div>
+							<div  class="container">
+								<span>我的初中:</span>
+								<ul>
+									<li v-for='(v,k) in middle_school'>
+										<input type="text" name="middle_school[]" :value="v" > 
+										<a :href="'#'+k" class="delete" @click="deleteEl($event)">清除</a>
+									</li>
+									<li><a href="javascript:;" class="add"  @click="addEl($event)">+添加初中学校</a></li>
+								</ul>
+							</div>
+							<p class="underline"></p>	
+						</div>
+						<input class="submit submit_education" type="button" 
+								value="保存修改" @click="sub('.submit_education',$event)">	 
+					</div>
+				 </form>
+				</div>
+			`
+			
+		})
+
+		 const myRouter=new VueRouter({
+			 routes:[
+				 {path:'/archives',component:myArchives},
+				 {path:'',component:myArchives,
+					children:[
+					
+					{path:'/',component:myDetails},
+					{path:'/myDetails',component:myDetails},
+					{path:'/myUpdate',component:myUpdate}
+					]
+				 }
+			 ]
+		 });
+		 new Vue({
+			 router:myRouter,
+			 el:'#container',
+			 data:{
+				 msg:'你好呀？？？',
+				 list:[]
+			 }
+		 })
+	 </script>
+</body>
+</html>

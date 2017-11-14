@@ -1,0 +1,449 @@
+#header{
+	width:100%;
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom:1px solid #ECECEA;
+	margin-top:10px;
+	background: #fff;
+	padding:0;
+	margin:0;
+}
+#header .topNavs{
+	width: 960px;
+	margin: 10px auto;
+}
+
+#header>.topNavs>.logo{
+	float:left;
+	background: url(../img/client-side/logo.jpg) no-repeat 0 -10px;
+}
+#header>.topNavs>.logo>a{
+	height:55px;
+	display:inline-block;
+}
+#header>.topNavs>.logo>.pcbaby{
+	width: 126px;
+}
+#header .topNavs>.logo>.app{
+	width: 170px;
+}
+.topNavs .nav {
+	float: left;
+	margin-left: 114px;
+	display: inline;
+}
+#header .nav>li{
+	float:left;
+}
+#header .nav>li>a{
+	font-size:16px;
+	height:42px;
+	line-height:42px;
+	padding:0 20px;
+	font-weight:bold;
+}
+#header .nav>li>a:hover{
+	color:red;
+	text-decoration:underline;
+}
+/*主页面*/
+body{
+	overflow:hidden;
+}
+.base {
+	width: 100%;
+	height: 100%;
+	background: #FBF5F7;
+	overflow: hidden;
+	padding-top: 67px;
+	box-sizing: border-box;
+	position:relative;
+}
+.area{
+	width:1100px;
+	margin:0 auto;
+	position:relative;
+}
+.pa{
+	 position:absolute;
+ }
+.inds{
+	position:fixed;
+	top:240px;
+	right:30px;
+	z-index:999;
+}
+.inds li{
+	margin-bottom:10px;
+}
+.inds li a{
+	display:inline-block;
+	width:15px;
+	height:15px;
+	border-radius:50%;
+	border:1px solid #D0CFD0;
+}
+.inds li a.hover{
+	border:1px solid #FD7A92;
+}
+.jt {
+	width: 75px;
+	height: 39px;
+	margin-left: -37px;
+	background: url(//www1.pcbaby.com.cn/2014/app/phone/images/bop.png) no-repeat;
+	position:absolute;
+	left: 50%;
+	top: 680px;
+	z-index: 9999;
+	cursor: pointer;
+}
+/*动画部分*/
+@keyframes show{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeInUp{
+	0% {
+		opacity: 0;
+		transform: translateY(500px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes fadeInDown{
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes fadeInLeft {
+	0%{
+		opacity:0;
+		transform:translateX(-200px);
+	}
+
+	100%{opacity:1;
+		transform:translateX(0);
+	}
+}
+@keyframes scaleBig {
+	0% {
+		transform: scale(0.8);
+		opacity: 0;
+	}
+	50% {
+		transform: scale(1.2);
+		opacity: .8;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+@keyframes scale{
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+@keyframes slideIn {
+	0% {
+		transform: translate(25px, 185px) scale(0);
+	}
+	100% {
+		transform: translate(0) scale(1);
+	}
+}
+
+/*第一屏动画*/
+.main .dom1.checked .p1-1{
+	 animation:show 1s;
+}
+.main .dom1.checked .p1-2{
+	 animation:fadeInUp 1s;
+ }
+.main .dom1.checked .p1-3{
+	 animation:fadeInDown 1s;
+ }
+.main .dom1.checked .p1-4 img{
+	animation:fadeInDown 1s;
+}
+.main .dom1.checked .p1-btn{
+	animation:fadeInDown 1s;
+}
+/*第二屏动画*/
+.main .dom2.checked .p2-1{
+	animation:fadeInLeft 1s;
+}
+.main .dom2.checked .p2-2{
+	animation:fadeInUp 1s;
+}
+.main .dom2.checked .p2-3a,
+.main .dom2.checked .p2-3b,
+.main .dom2.checked .p2-3c{
+	animation:scaleBig 1s;
+}
+.main li.checked .jt{
+	animation:show 1s;
+}
+/*第三屏动画*/
+.main .dom3.checked .p3-1 {
+	animation:fadeInUp 1s;
+}
+.main .dom3.checked .p3-4{
+	animation: fadeInLeft 1s;
+}
+.main .dom3.checked .p3-3{
+	animation: fadeInDown 1s;
+}
+.main .dom3.checked .p3-2a,.main .dom3 .p3-2b,.main .dom3 .p3-2c{
+	animation: scaleBig 1s;
+}
+/*第四屏动画*/
+.main .dom4.checked .p4-2 {
+	animation:fadeInUp 1s;
+}
+.main .dom4.checked .p4-1  {
+	animation:fadeInLeft 1s;
+}
+.main .dom4.checked .p4-3  {
+	animation:scale 1s;
+}
+.main .dom4.checked .p4-4 {
+	animation:scaleBig 1s;
+}
+
+/*第五屏动画*/
+.main .dom5.checked .p5-1{
+	animation:fadeInLeft 1s;
+}
+.main .dom5.checked .p5-2{
+	animation:fadeInUp 1s;
+}
+.main .dom5.checked .p5-4{
+	animation:slideIn 1s;
+}
+.main .dom5.checked .p5-3{
+	animation:slideIn 1s;
+}
+
+	/*第一屏*/
+#container>.main>.dom1{
+	background: #FBF5F7 url(../img/client-side/p1-bg.jpg) no-repeat center 0;
+}
+.dom1 .p1-1{
+	left: 8px;
+	top: 25px;
+
+}
+.dom1 .p1-2 {
+	left: 217px;
+	top: 20px;
+}
+.dom1 .p1-3 {
+	left: 621px;
+	top: 71px;
+}
+.dom1 .p1-4 {
+	left: 899px;
+	top: 266px;
+	width: 177px;
+	height: 176px;
+	animation-delay:1s;
+}
+.dom1 .p1-4 img {
+	width: 100%;
+}
+.dom1 .p1-btn {
+	width: 240px;
+	left: 621px;
+	top: 269px;
+}
+.dom1 .p1-btn a {
+	width: 240px;
+	height: 72px;
+	margin-bottom: 27px;
+	display: block;
+	float: left;
+	padding-left:72px;
+	box-sizing:border-box;
+	line-height:72px;
+	font-size:22px;
+	color:#fff;
+	position: relative;
+	background: url(../img/client-side/p1-5.png) no-repeat;
+	overflow: hidden;
+}
+.dom1 .p1-btn a:last-child{
+	background-position:0 -100px;
+}
+
+/*第一屏结束*/
+
+/*第二屏*/
+.dom2 .area-inx{
+	width: 1100px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	background: url(../img/client-side/p2-bg.png) no-repeat right 50px;
+}
+.dom2 .p2-1{
+	left: 52px;
+	top: 211px;
+}
+.dom2 .p2-2{
+	left: 678px;
+	top: 157px;
+}
+.dom2 .p2-3a {
+	top: 196px;
+	left: 600px;
+}
+.dom2 .p2-3b {
+	left: 586px;
+	top: 270px;
+	z-index:0;
+}
+.dom2 .p2-3c {
+	left: 922px;
+	top: 417px;
+}
+.dom2 .line {
+	width: 1803px;
+	height: 1px;
+	margin-left: -901px;
+	left: 50%;
+	bottom: 0;
+	font: 0/0 Arial;
+	background: url(../img/client-side/line.png) no-repeat;
+}
+
+/*第二屏结束*/
+/*第三屏*/
+.dom3 .p3-1{
+	top: 154px;
+	left: 288px;
+}
+.dom3 .p3-4{
+	left: 40px;
+	top: 234px;
+}
+.dom3 .p3-3{
+	left: 644px;
+	top: 252px;
+}
+.dom3 .p3-2a{
+	left: 644px;
+	top: 252px;
+}
+.dom3 .p3-2{
+	background: url(../img/client-side/p3-4.png);
+}
+.dom3 .p1-2a {
+	width: 60px;
+	height: 60px;
+	left: 255px;
+	top: 348px;
+	background-position: -61px 0;
+}
+.dom3 .p1-2b {
+	width: 66px;
+	height: 66px;
+	left: 14px;
+	top: 252px;
+	background-position: -132px 0;
+}
+.dom3 .p1-2c {
+	width: 50px;
+	height: 50px;
+	background-position: 0 0;
+	left: 274px;
+	top: 214px;
+}
+/*第三屏结束*/
+
+/*第四屏*/
+.dom4 .p4-2{
+	 left: 659px;
+	 top: 153px;
+ }
+.dom4 .p4-1{
+	left: 82px;
+	top: 280px;
+}
+.dom4 .p4-3{
+	left: 723px;
+	top: 63px;
+}
+.dom4 .p4-4{
+	background: url(../img/client-side/p4-4.png);
+}
+.dom4 .p4-4a{
+	width: 75px;
+	height: 75px;
+	left: 744px;
+	top: 104px;
+}
+.dom4 .p4-4b{
+	width: 97px;
+	height: 97px;
+	left: 886px;
+	top: 50px;
+	background-position: -86px 0;
+}
+
+.dom4 .p4-4c{
+	width: 55px;
+	height: 55px;
+	background-position: -279px 0;
+	left: 924px;
+	top: 306px;
+}
+
+.dom4 .p4-4d{
+	width: 76px;
+	height: 76px;
+	left: 994px;
+	top: 156px;
+	background-position: -194px 0;
+}
+
+
+/*第四屏结束*/
+
+/*第五屏*/
+.dom5 .p5-1{
+	left: 52px;
+	top: 247px;
+}
+.dom5 .p5-2{
+	left: 660px;
+	top: 189px;
+}
+.dom5 .p5-4{
+	left: 818px;
+	top: 130px;
+}
+.dom5 .p5-3{
+	left: 775px;
+	top: 123px;
+}
+/*第五屏结束*/

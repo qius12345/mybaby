@@ -1,0 +1,211 @@
+/*header的样式*/
+#header{
+	width:1424px;
+	height:72px;
+	border-bottom:2px solid #ff4444;
+}
+/*header img样式*/
+#header{
+	position:relative;
+}
+#header a{
+	display:inline-block;
+	width:170px;
+	height:72px;
+	background:url(../img/login/login.png) no-repeat 10px 0px;
+	margin-left:200px;
+}
+#header .header_left{
+	display:inline-block;
+	width:345px;
+	height:35px;
+	background:url(../img/login/login.png) no-repeat -2px -145px;
+	position:absolute;
+	right:200px;
+	top:17px;
+	margin-top:10px;
+}
+#header .header_left span{margin-left:15px;}
+/*middle 部分*/
+#middle{
+	width:1200px;
+	height:680px;
+	background:#fff;
+	margin:100px auto;
+}
+#middle #mid_left_img{
+	display:inline-block;
+	width:600px;
+	height:800px;
+	position:relative;
+}
+#mid_left_img img{
+	margin:150px 50px;
+}
+/*mid_right_form 部分*/
+#mid_right_form{
+	display:inline-block;
+	width:280px;
+	height:430px;
+/*	background:gray;*/
+	float:right;
+	margin:150px 100px;
+}
+#form_header{
+	width:280px;
+	height:40px;
+	border-bottom:2px solid #ececec;
+}
+#form_header .f_h_left,#form_header .f_h_right{	
+		display:inline-block;
+		width:110px;
+		height:40px;
+		font-size:20px;
+}
+#form_header .f_h_right{
+	margin-left:50px;
+	}
+#form_header .f_h_left:hover,#form_header .f_h_right:hover{
+	border-bottom:2px solid #ff4444;
+	color:#ff4444;
+
+}
+/*form部分*/
+#form input:not(.checkBox){
+	width:220px;
+	height:35px;
+	margin-top:20px;
+	padding:0 35px;
+	
+}
+#checkBox_sum{
+	margin-top:20px;
+}
+#checkBox_sum a{
+	display:inline-block;
+	width:72px;
+	height:16px;
+	float:right;
+	margin-left:50px;
+	color:#ff4444;
+}
+ #form #form1_button,#form2_button{
+	width:280px;
+	height:35px;
+	background:#ff4444;
+}
+/*表单加背景部分*/
+#form p{
+	position:relative;
+}
+.form_img_user,.form_img_key{
+	display:inline-block;
+	width:14px;
+	height:28px;
+	
+}
+.form_img_user{
+	background:url(../img/login/login.png) no-repeat -31px -675px;
+	position:absolute;
+	top:25px;
+	right:250px;
+}
+.form_img_key{
+	background:url(../img/login/login.png) no-repeat -50px -675px;
+	position:absolute;
+	top:28px;
+	right:250px;
+}
+/*其它方式登录*/
+#other_login{
+	width:100%;
+	height:52px;
+	margin-top:20px
+}
+#other_login .qq,#other_login .wechat,#other_login .sina{
+	display:inline-block;
+	width:31px;
+	height:23px;
+	margin:1px 5px;
+}
+#other_login span{
+	display:inline-block;
+	width:98px;
+	height:4px;
+	line-height:40px;
+	text-align:center;
+}
+#other_login .qq{
+	background:url(../img/login/login.png) no-repeat 0 -680px; 
+}
+#other_login .wechat{
+	background:url(../img/login/login.png) no-repeat -31px -710px; 
+}
+#other_login .sina{
+	background:url(../img/login/login.png) no-repeat 0 -710px; 
+}
+/*注册新的账号*/
+#form_bottom{
+	display:block;
+	width:100%;
+	height:38px;
+	text-align:center;
+	line-height:38px;
+	background:#ececec;
+
+}
+#form_bottom:hover{
+	color:#ff4444;
+}
+/*form的第二部分*/
+
+#form2 input{
+	height:35px;
+	margin-top:20px;
+}
+#phone{
+	width:243px;
+}
+#vali_code,#phone_vali_code{
+	width:162px;
+}
+#phone_vali_code_p .msg_button,#vali_code_p a{
+	display:inline-block;
+	width:70px;
+	height:38px;
+}
+#vali_code_p a{
+	border:1px solid #ececec;
+	text-align:center;
+	line-height:38px;
+}
+#phone_p,#vali_code_p,#phone_vali_code_p{
+	position:relative;
+	
+}
+#phone,#vali_code,#phone_vali_code{
+	padding-left:33px;
+	}
+#phone_p i,#vali_code_p i,#phone_vali_code_p i{
+	display:inline-block;
+	width:17px;
+	height:28px;
+	position:absolute;
+	top:31px;
+	left:15px;
+}
+#phone_p i{
+	background:url(../img/login/login.png) no-repeat -65px -707px;
+}
+#vali_code_p i{
+	background:url(../img/login/login.png) no-repeat -81px -710px;
+}
+#phone_vali_code_p i{
+	background:url(../img/login/login.png) no-repeat -100px -707px;
+}
+/*js css*/
+.close{
+	display:none;
+}
+
+

@@ -1,0 +1,25 @@
+div,h1,h2,h3,h4,h5,h6,ul,ol,li,dt,dd{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	color:#333333;
+}
+body{
+	font-size:14px;
+	margin:3px;
+}
+.clear{
+	clear:both;
+}
+.clear:before{
+	content:"";
+	display:table;
+}
+.clear:after{
+	content:"";
+	display:block;
+	clear:both;
+}
